@@ -21,10 +21,11 @@ public class Solution {
 class RunningMedian {
 	PriorityQueue<Integer> lower = new PriorityQueue<Integer>(10,
 		new Comparator<Integer>() {
-				public int compare(Integer arg0, Integer arg1) {
-						return (arg0 < arg1) ? 1 : arg0 == arg1 ? 0 : -1;
-				}
-		}), higher = new PriorityQueue<Integer>();
+			public int compare(Integer arg0, Integer arg1) {
+				return (arg0 < arg1) ? 1 : arg0 == arg1 ? 0 : -1;
+			}
+		}), 
+		higher = new PriorityQueue<Integer>();
 
 	public void insert(Integer n) {
 		if (lower.isEmpty() && higher.isEmpty())
