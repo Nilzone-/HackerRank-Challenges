@@ -39,7 +39,7 @@ class RunningMedian {
 		}
 	}
 
-	void rebalance() {
+	private void rebalance() {
 		if (lower.size() < higher.size() - 1)
 			lower.add(higher.remove());
 		else if (higher.size() < lower.size() - 1)
